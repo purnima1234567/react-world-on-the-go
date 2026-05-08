@@ -34,10 +34,12 @@ const Country = ({ country, handleVisitedCountries, handleVisitedFlag }) => {
             <p>Area: {country.area.area} {
                 country.area.area > 300000 ? "Big Country" : 'Small country'
             }</p>
-            <button onClick={handleVisited}>
+            <div style={{ display: 'flex', gap: '10px' }}>
+                <button onClick={handleVisited}>
                 {visited ? 'Visited' : 'Not Visited'}
             </button>
             <button onClick={() => { handleVisitedFlag(country?.flags?.flags?.png) }}>Add Visited Flag</button>
+            </div>
         </div>
     )
 };
